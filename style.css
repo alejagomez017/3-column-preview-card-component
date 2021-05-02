@@ -11,7 +11,8 @@
     display:grid;
     height:500px;
     margin: 10px 0 0 10px;
-
+    justify-content: center;
+    margin-top: 80px;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows:1fr /*rows because we want title to take up one row etc */ ;
     grid-template-areas:
