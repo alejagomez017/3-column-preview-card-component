@@ -1,0 +1,172 @@
+
+:root{
+   --yellow:hsl(31, 77%, 52%);
+   --blue:hsl(184, 100%, 22%);
+   --green:hsl(179, 100%, 13%);
+
+}
+
+
+.grid{
+    display:grid;
+    height:500px;
+    margin: 10px 0 0 10px;
+
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows:1fr /*rows because we want title to take up one row etc */ ;
+    grid-template-areas:
+    "sedans suv luxury" 
+    ;
+}
+
+.sedans{
+    background-color: var(--yellow);
+    grid-area:sedans;
+}
+
+img {
+    margin:30px ;
+    padding-top: 10px;
+}
+
+h2{
+    font-family: 'Big Shoulders Display', cursive;
+    margin-left:30px;
+    color:white;
+   
+    
+}
+
+p{
+    color:white;
+    text-align:left;
+    margin-left:30px;
+    margin-right:30px;
+    font-family: 'Lexend Deca', sans-serif;
+    line-height:1.7;
+}
+
+button{
+    margin-left:30px;
+    border-radius: 60px;
+    border:none;
+    margin-top:70px;
+    cursor:pointer;
+    
+}
+
+
+.buttontext1{
+    color:  var(--yellow);
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+
+.buttontext2{
+    color: var(--blue);
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+
+.buttontext3{
+    color: var(--green);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+
+
+
+
+
+.Suv{
+    background-color: var(--blue);
+    grid-area:suv;
+}
+
+
+.luxury{
+    background-color: var(--green);
+    grid-area:luxury;
+}
+
+
+  
+
+@media (max-width: 380px) { 
+
+
+    .grid{
+        display:grid;
+        max-height: 300px;
+        max-width:300px;
+        padding-left:10px;
+        padding-right:10px;
+        grid-template-columns: 1fr;
+        grid-template-rows:2fr 2fr 2fr;
+        grid-template-areas:
+        "sedans"
+        "suv" 
+        "luxury" /*because we have 3 columns we have to state them twice */
+         /*if we want white space next to this header for example, we can do "header header ." */
+        
+        ;
+    }
+
+
+
+
+    .sedans{
+        background-color: var(--yellow);
+        grid-area:sedans;
+        
+        
+    }
+
+    .Suv{
+        background-color: var(--blue);
+        grid-area:suv;
+    }
+    
+    
+    .luxury{
+        background-color: var(--green);
+        grid-area:luxury;
+    }
+
+
+    img {
+        margin:30px 0 0 50px;
+        padding-top: 10px;
+    }
+    
+    h2{
+        font-family: 'Big Shoulders Display', cursive;
+        margin-left:50px;
+        margin-top:60px;
+        color:white;
+       
+        
+    }
+    
+    p{
+        color:white;
+        text-align:left;
+        margin-left:50px;
+        margin-right:50px;
+        font-family: 'Lexend Deca', sans-serif;
+        line-height:1.7;
+        font-weight: 500;
+    }
+    
+    button{
+        margin-left:50px;
+        border-radius: 60px;
+        border:none;
+        margin-bottom:30px;
+        
+    }
+    
+}
